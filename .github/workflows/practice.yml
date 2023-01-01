@@ -11,20 +11,23 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: run lint script
+      - name: Get Code
         uses: actions/checkout@v3
+      - name: run lint script
         run: npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: run test script
+      - name: Get Code
         uses: actions/checkout@v3
+      - name: run test script
         run: npm run test
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: run build script
+      - name: Get Code
         uses: actions/checkout@v3
+      - name: run build script
         run: npm run build
   notify-done:
     runs-on: ubuntu-latest
