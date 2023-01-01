@@ -1,0 +1,23 @@
+name: Practice 04
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run lint script
+        run: npm run lint
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run test script
+        run: npm run test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run build script
+        run: npm run build
+  notify-done:
+    runs-on: ubuntu-latest
+    steps:
+      - name: notify competion
+        run: echo "Done!"
