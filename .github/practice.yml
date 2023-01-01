@@ -1,6 +1,13 @@
 name: Practice 04
 on: push
 jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Indtall dependecies
+        run: npm ci
   lint:
     runs-on: ubuntu-latest
     steps:
