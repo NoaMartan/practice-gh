@@ -12,16 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run lint script
+        uses: actions/checkout@v3
         run: npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
       - name: run test script
+        uses: actions/checkout@v3
         run: npm run test
   build:
     runs-on: ubuntu-latest
     steps:
       - name: run build script
+        uses: actions/checkout@v3
         run: npm run build
   notify-done:
     runs-on: ubuntu-latest
